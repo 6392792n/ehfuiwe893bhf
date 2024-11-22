@@ -76,16 +76,6 @@
             font-family: monospace;
         }
 
-        .worry-text {
-            font-size: 48px;
-            font-family: 'Chrome Hearts Bold', 'Courier New', Courier, monospace;
-            color: #ffffff;
-            white-space: nowrap;
-            border-right: 2px solid #ffffff;
-            overflow: hidden;
-            animation: typewriter 3.5s steps(5) infinite normal both, blinkTextCursor 500ms steps(5) infinite normal;
-        }
-
         @keyframes typewriter {
             0% {
                 width: 0;
@@ -225,6 +215,6 @@
 </body>
 <script src="./effects/cursor.js"></script>
 <script> document.addEventListener("DOMContentLoaded", function () { const audio = document.getElementById("Audio"); const audioControl = document.getElementById("audio-control"); audio.volume = 0; overlay.addEventListener("click", () => { audio.muted = false; audio.play(); overlay.style.display = "none"; }); function setVolume(level) { if (level >= 0 && level <= 1) { audio.volume = level; } else { console.error("Volume level must be between 0 and 1"); } } setVolume(0.3); }); </script>
-<script> if (document.addEventListener) { document.addEventListener("DOMContentLoaded", function () { loaded(); }); } else if (document.attachEvent) { document.attachEvent("onreadystatechange", function () { loaded(); }); } function loaded() { setInterval(loop, 300); } var x = 0; var titleText = ["@", "@j", "@ji", "@jiv", "@jivb", "@jiv", "@ji", "@j", "@", "w", "wo", "wor", "worr", "worry", "worry.", "worry.s", "worry.sh", "worry.s", "worry.", "worry", "worr", "wor", "wo", "w",]; function loop() { document.getElementsByTagName("title")[0].innerHTML = titleText[x++ % titleText.length]; } </script>
+<script> if (document.addEventListener) { document.addEventListener("DOMContentLoaded", function () { loaded(); }); } else if (document.attachEvent) { document.attachEvent("onreadystatechange", function () { loaded(); }); } function loaded() { setInterval(loop, 300); } var x = 0; var titleText = ["@", "@j", "@ji", "@jiv", "@jivb", "@jiv", "@ji", "@j", "@", "v", "vu", "vul", "vuli", "vulif", "vulify.", "vulify.l", "vulify.lo", "vulify.lol", "vulify.lo", "vulify.l", "vulify.", "vulify", "vulif", "vuli", "vul", "vu", "v"]; function loop() { document.getElementsByTagName("title")[0].innerHTML = titleText[x++ % titleText.length]; } </script>
 <script src="./effects/snowstorm.js"></script>
 </html>
