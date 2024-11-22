@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=">.&#60 im a script kiddy" />
+    <meta property="og:image" content="https://vulify.lol/1/pfp/jivb.jpg" />
+    <script src="/js/antinspect.js" type="c50b9563f6c7df36db5af85c-text/javascript"></script>
+    <link rel="icon" type="image/x-icon" href="https://vulify.lol/1/pfp/jivb.jpg">
+    <title>jivb</title>
+    <style>
+        @font-face {
+            font-family: 'Array';
+            src: url('../biolinks/font/Array.woff2') format('woff2'), url('../biolinks/font/Array.woff') format('woff'), url('../biolinks/font/Array.ttf') format('truetype');
+            font-weight: 400;
+            font-display: swap;
+            font-style: normal;
+        }
+
+        * {
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-user-drag: none;
+            -moz-user-select: none;
+        }
+
+        * img {
+            pointer-events: none;
+        }
+
+        html,
+        body {
+            -ms-overflow-style: none;
+        }
+
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.940);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 24px;
+            z-index: 9999;
+            cursor: pointer;
+            opacity: 1;
+            transition: all 0.4s ease;
+        }
+
+        #overlay.hidden {
+            opacity: 0;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://files.catbox.moe/33wkaj.jpg');
+            backdrop-filter: blur(1.2px);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            cursor: crosshair;
+            font-family: monospace;
+        }
+
+        .worry-text {
+            font-size: 48px;
+            font-family: 'Chrome Hearts Bold', 'Courier New', Courier, monospace;
+            color: #ffffff;
+            white-space: nowrap;
+            border-right: 2px solid #ffffff;
+            overflow: hidden;
+            animation: typewriter 3.5s steps(5) infinite normal both, blinkTextCursor 500ms steps(5) infinite normal;
+        }
+
+        @keyframes typewriter {
+            0% {
+                width: 0;
+            }
+
+            50% {
+                width: 5ch;
+            }
+
+            100% {
+                width: 0;
+            }
+        }
+
+        @keyframes blinkTextCursor {
+            from {
+                border-right-color: #ffffff;
+            }
+
+            to {
+                border-right-color: transparent;
+            }
+        }
+
+        .bio-container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 15px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .bio-container img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .username {
+            font-size: 36px;
+            font-family: 'Array', 'Courier New', Courier, monospace;
+            color: #ffffff;
+            text-shadow: 4px 4px 20px #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            font-size: 18px;
+        }
+
+        .contact-info a {
+            color: #ffffff;
+            font-weight: bold;
+            text-shadow: 0px 0px 30px #ffffff;
+            margin: 5px 0;
+        }
+
+        .contact-info a:hover {
+            cursor: crosshair;
+        }
+
+        .contact-info p {
+            color: #0049e7;
+            font-weight: bold;
+            text-shadow: 0px 0px 30px #0049e7;
+            margin: 5px 0;
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background-color: transparent;
+            pointer-events: none;
+            transform: rotate(45deg);
+            animation: sparkleFade 0.8s forwards;
+        }
+
+        .sparkle::before,
+        .sparkle::after {
+            content: '';
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .sparkle::before {
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 0 8px white, 0 0 15px white;
+        }
+
+        .sparkle::after {
+            width: 100%;
+            height: 100%;
+            transform: rotate(90deg);
+            box-shadow: 0 0 8px white, 0 0 15px white;
+        }
+
+        @keyframes sparkleFade {
+            from {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            to {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="overlay"> hewwo ^-^ </div>
+    <div class="audio-bg"> <audio id="Audio" loop muted>
+            <source src="audio/jivb.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+        </audio> </div>
+    <div class="bio-container"> <img src="pfp/jivb.jpg">
+        <div class="username"> jivb</div>
+        <div class="contact-info">
+            <p>Developer @ <a href="https://exposing.lol" target="_blank" style="text-decoration: none;">exposing.lol</a></p>
+            <p>Telegram: <a href="https://t.me/crimescommitted" target="_blank"
+                    style="text-decoration: none;">crimescommitted</a></p>
+            <p>Website: <a href="https://vulify.lol" target="_blank" style="text-decoration: none;">vulify.lol</a></p>
+            <p>Email: <a href="mailto:jivb@vulify.lol" target="_blank"
+                    style="text-decoration: none;">jivb@vulify.lol</a></p>
+            <p>Discord: <a href="https://discordapp.com/users/864229492363755541" target="_blank"
+                    style="text-decoration: none;">jivb</a></p>
+        </div>
+    </div>
+    <script disable-devtool-auto="" src="https://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
+</body>
+<script src="./effects/cursor.js"></script>
+<script> document.addEventListener("DOMContentLoaded", function () { const audio = document.getElementById("Audio"); const audioControl = document.getElementById("audio-control"); audio.volume = 0; overlay.addEventListener("click", () => { audio.muted = false; audio.play(); overlay.style.display = "none"; }); function setVolume(level) { if (level >= 0 && level <= 1) { audio.volume = level; } else { console.error("Volume level must be between 0 and 1"); } } setVolume(0.3); }); </script>
+<script> if (document.addEventListener) { document.addEventListener("DOMContentLoaded", function () { loaded(); }); } else if (document.attachEvent) { document.attachEvent("onreadystatechange", function () { loaded(); }); } function loaded() { setInterval(loop, 300); } var x = 0; var titleText = ["@", "@j", "@ji", "@jiv", "@jivb", "@jiv", "@ji", "@j", "@", "w", "wo", "wor", "worr", "worry", "worry.", "worry.s", "worry.sh", "worry.s", "worry.", "worry", "worr", "wor", "wo", "w",]; function loop() { document.getElementsByTagName("title")[0].innerHTML = titleText[x++ % titleText.length]; } </script>
+<script src="./effects/snowstorm.js"></script>
+</html>
