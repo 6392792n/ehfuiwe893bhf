@@ -10,184 +10,50 @@
     <title>Vulify.lol</title>
 </head>
 
+<style>
+    body {
+        background-color: #141414;
+        color: #ff6b6b;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .container {
+        background-color: #161616;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        text-align: center;
+    }
+    h1 {
+        font-size: 72px;
+        margin: 0;
+        color: #d8d8d8;
+    }
+    p {
+        font-size: 18px;
+        margin: 20px 0 0;
+        color: #d8d8d8;
+    }
+    a {
+        color: #1e90ff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+
 <body>
-    <header class="header-bg">
-        <a href="#" class="header-text-button">Vulify.lol</a>
-        <img src="biolinks/ico/logo.png" alt="Logo" class="icn">
-        <div class="header-buttons">
-            <a href="https://vulifylol.mysellix.io" target="_blank">Store</a>
-            <a href="https://discord.gg/w9UE9MQS" target="_blank">Server</a>
-            <a href="https://vulify.lol/187">Preview</a>
-        </div>
-    </header>
     <div class="container">
-        <h1 class="title"><span id="typing-effect" class="typing-effect"></span></h1>
-        <p class="title-text">
-            Mark your digital presence with ease.
-        </p>
-
-        <div class="embed-box">
-            <div class="fixed-url" style="flex: 1; display: flex; align-items: center;">
-                <span class="dark-grey" style="color: #949494; margin-right: 10px;">vulify.lol/</span>
-                <input type="text"
-                    style="position:static ; align-items: left; transform: translateY(-0.1em); background: none;"
-                    placeholder="username">
-            </div>
-            <button class="claim-link-button" onclick="window.location.href='https:/\/discord.gg/tW5KSvfwKf';"
-                target="_blank">Claim</button>
-        </div>
-        <div id="features" class="features">
-            <h2 class="features-title">Appearance / Features</h2>
-            <p class="features-text">
-                Vulify offers many unique features for you to use
-            </p>
-
-            <div class="feature-grid">
-                <div class="feature-section">
-                    <h3>Moderation / Protection</h3>
-                    <p>
-                        Ensure your digital presence remains safe and secure with our robust moderation and protection
-                        features. We prioritize your privacy and security.
-                    </p>
-                </div>
-
-                <div class="feature-section">
-                    <h3>Flexibility</h3>
-                    <p>
-                        Offers amazing performance and 0 lag, free changes on all biolinks
-                    </p>
-                </div>
-
-                <div class="feature-section">
-                    <h3>Audio</h3>
-                    <p>
-                        Offers the best audio quality
-                    </p>
-                </div>
-
-                <div class="feature-section">
-                    <h3>Socials</h3>
-                    <p>
-                        All social platforms are available to be connected
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <h2></h2>
-        <div id="pricing" class="buy-spot">
-            <div class="buy-desc">
-                <p>✓ Custom Biolinks of your choice</p>
-                <p>✓ Full access to all features</p>
-                <p>✓ The ability to change your links and data anytime</p>
-                <p>✓ Ad-free environment for you</p>
-                <p>✓ Custom Biolinks of your choice</p>
-                <p>✓ Full access to all features</p>
-            </div>
-        </div>
-        <h1 class="vulify-ranks-title">Vulify Ranks</h1>
-
-        <div class="bottom-boxes">
-            <div class="bottom-box">
-                <h3>Standard</h3>
-                <p>✓ 12 Socials</p>
-                <p>✓ Profile Picture</p>
-                <p>✓ Background</p>
-                <p>✓ Bio</p>
-                <p>✓ Custom Songs</p>
-            </div>
-            <div class="bottom-box">
-                <h3 style="color: #ffee00;" class="premium"> Premium </h3>
-                <p>✓ Custom Colors</p>
-                <p>✓ Premium Badge</p>
-                <p>✓ 2 Custom Badge</p>
-                <p>✓ Background Video</p>
-                <p>✓ Typewrite Effect</p>
-                <p>✓ Sparkle effect</p>
-                <p>✓ Access To All New Features</p>
-            </div>
-        </div>
-
+        <h1>Down for Maintenance</h1>
+        <p>Oops! This page is being worked on at the moment, please try again later.</p>
+        <p>Contact @jivb on discord for more info</p>
     </div>
-    <footer>
-        <p>© 2024 Vulify - All rights reserved.</p>
-    </footer>
-
-    <script src="cursor.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const text = ["The Next Generation of Biolinks"];
-            const typingElement = document.getElementById('typing-effect');
-            let lineIndex = 0;
-            let charIndex = 0;
-            let isTyping = true;
-
-            function type() {
-                if (isTyping) {
-                    if (charIndex < text[lineIndex].length) {
-                        if (charIndex === 0) {
-                            typingElement.innerHTML += `<span class="line${lineIndex + 1}">`;
-                        }
-                        typingElement.lastElementChild.textContent += text[lineIndex][charIndex];
-                        charIndex++;
-                        setTimeout(type, 50);
-                    } else if (lineIndex < text.length - 1) {
-                        typingElement.innerHTML += '</span><br>';
-                        lineIndex++;
-                        charIndex = 0;
-                        setTimeout(type, 50);
-                    } else {
-                        isTyping = false;
-                        setTimeout(type, 1000);
-                    }
-                } else {
-                    if (typingElement.textContent.length > 0) {
-                        let lastSpan = typingElement.lastElementChild;
-                        lastSpan.textContent = lastSpan.textContent.slice(0, -1);
-                        if (lastSpan.textContent.length === 0) {
-                            lastSpan.remove();
-                            if (typingElement.lastElementChild && typingElement.lastElementChild.tagName === 'BR') {
-                                typingElement.lastElementChild.remove();
-                            }
-                            lineIndex = Math.max(0, lineIndex - 1);
-                            charIndex = text[lineIndex].length;
-                        } else {
-                            charIndex--;
-                        }
-                        setTimeout(type, 25);
-                    } else {
-                        isTyping = true;
-                        lineIndex = 0;
-                        charIndex = 0;
-                        setTimeout(type, 500);
-                    }
-                }
-            }
-
-            type();
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const input = document.querySelector('.embed-box input');
-            const placeholder = "username";
-
-            input.addEventListener('focus', function () {
-                if (input.value === placeholder) {
-                    input.value = '';
-                }
-            });
-
-            input.addEventListener('blur', function () {
-                if (input.value === '') {
-                    input.value = placeholder;
-                }
-            });
-        });
-
-        function scrollToPricing() {
-            document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
     <script disable-devtool-auto="" src="https://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
 </body>
 
