@@ -117,6 +117,20 @@
             margin-bottom: 15px;
         }
 
+        #background-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100vw;
+            min-height: 100vh;
+            width: auto;
+            height: auto;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+
         .video-bg a,
         #audio-control {
             display: flex;
@@ -223,8 +237,7 @@
     <div class="bio-container"> <img src="pfp/jivb.jpg">
         <div class="audio-bg">
             <a id="audio-control">
-                <svg fill='#d8d8d8' width="18px" height="18px" viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg">
+                <svg fill='#d8d8d8' width="18px" height="18px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                     <path clip-rule="evenodd"
                         d="m2 7.5v3c0 .8.6 1.5 1.4 1.5h2.3l3.2 2.8c.1.1.3.2.4.2s.2 0 .3-.1c.2-.1.4-.4.4-.7v-.9l-7.2-7.2c-.5.2-.8.8-.8 1.4zm8 2v-5.8c0-.3-.1-.5-.4-.7-.1 0-.2 0-.3 0s-.3 0-.4.2l-2.8 2.5-4.1-4.1-1 1 3.4 3.4 5.6 5.6 3.6 3.6 1-1z"
                         fill-rule="evenodd" />
@@ -257,59 +270,43 @@
     });
 </script>
 <script>
-        const video = document.getElementById("background-video");
-        const audioControl = document.getElementById("audio-control");
-        const overlay = document.getElementById("overlay");
-        const card = document.querySelector(".card");
-        const viewCountElem = document.getElementById("view-count");
+    document.getElementById('overlay').addEventListener('click', function () {
+        this.classList.add('hidden');
+        const card = document.querySelector('.card');
+        const asciiLogo = document.querySelector('.ascii-logo');
 
-        let hasInteracted = false;
-        let wasPlaying = false;
+        if (card) card.classList.add('show');
+        if (asciiLogo) asciiLogo.classList.add('show');
+    });
 
-        audio.volume = 0;
+    const video = document.getElementById("background-video");
+    const audioControl = document.getElementById("audio-control");
+    const overlay = document.getElementById("overlay");
 
-        audioControl.addEventListener("click", () => {
-            if (video.muted) {
-                video.muted = false;
-                audioControl.innerHTML = `<svg fill='#d8d8d8' width="20px" height="20px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="m2 7.5v3c0 .8.6 1.5 1.4 1.5h2.3l3.2 2.8c.1.1.3.2.4.2s.2 0 .3-.1c.2-.1.4-.4.4-.7v-.9l-7.2-7.2c-.5.2-.8.8-.8 1.4zm8 2v-5.8c0-.3-.1-.5-.4-.7-.1 0-.2 0-.3 0s-.3 0-.4.2l-2.8 2.5-4.1-4.1-1 1 3.4 3.4 5.6 5.6 3.6 3.6 1-1z" fill-rule="evenodd"/></svg>`;
-            } else {
-                video.muted = true;
-                audioControl.innerHTML = `<svg width="18px" height="18px" viewBox="-1 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Dribbble-Light-Preview" transform="translate(-65.000000, -3803.000000)" fill="#d8d8d8"><g id="icons" transform="translate(56.000000, 160.000000)"><path d="M18.074,3650.7335 L12.308,3654.6315 C10.903,3655.5815 9,3654.5835 9,3652.8985 L9,3645.1015 C9,3643.4155 10.903,3642.4185 12.308,3643.3685 L18.074,3647.2665 C19.306,3648.0995 19.306,3649.9005 18.074,3650.7335" id="play-[#1000]"></path></g></g></g></svg>`;
-            }
-        });
+    video.volume = 0; // Fix: Changed 'audio' to 'video'
 
-        overlay.addEventListener("click", () => {
-            hasInteracted = true;
+    audioControl.addEventListener("click", () => {
+        if (video.muted) {
             video.muted = false;
-            video.style.display = 'block';
-            video.play().catch(function (error) {
-                console.log("Autoplay prevented: ", error);
-            });
-            overlay.style.display = "none";
-            card.classList.add("show");
-            incrementViewCount();
-        });
+            audioControl.innerHTML = `<svg fill='#d8d8d8' width="20px" height="20px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" d="m2 7.5v3c0 .8.6 1.5 1.4 1.5h2.3l3.2 2.8c.1.1.3.2.4.2s.2 0 .3-.1c.2-.1.4-.4.4-.7v-.9l-7.2-7.2c-.5.2-.8.8-.8 1.4zm8 2v-5.8c0-.3-.1-.5-.4-.7-.1 0-.2 0-.3 0s-.3 0-.4.2l-2.8 2.5-4.1-4.1-1 1 3.4 3.4 5.6 5.6 3.6 3.6 1-1z" fill-rule="evenodd"/>
+        </svg>`;
+        } else {
+            video.muted = true;
+            audioControl.innerHTML = `<svg width="18px" height="18px" viewBox="-1 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#d8d8d8"><path d="M18.074,3650.7335 L12.308,3654.6315 C10.903,3655.5815 9,3654.5835 9,3652.8985 L9,3645.1015 C9,3643.4155 10.903,3642.4185 12.308,3643.3685 L18.074,3647.2665 C19.306,3648.0995 19.306,3649.9005 18.074,3650.7335"></path></g>
+        </svg>`;
+        }
+    });
 
+    overlay.addEventListener("click", () => {
+        video.muted = false;
+        video.style.display = 'block';
+        video.play().catch(err => console.warn("Autoplay blocked", err));
+    });
 
-        document.getElementById('background-video').addEventListener('touchstart', function (e) {
-            e.preventDefault();
-        });
-
-        document.addEventListener("visibilitychange", function () {
-            if (document.hidden) {
-                wasPlaying != video.paused;
-                if (wasPlaying) {
-                    video.pause();
-                }
-            } else {
-                if (hasInteracted && wasPlaying) {
-                    video.play().catch(function (error) {
-                        console.log("Autoplay prevented: ", error);
-                    });
-                }
-            }
-        });
 </script>
 <script> if (document.addEventListener) { document.addEventListener("DOMContentLoaded", function () { loaded(); }); } else if (document.attachEvent) { document.attachEvent("onreadystatechange", function () { loaded(); }); } function loaded() { setInterval(loop, 300); } var x = 0; var titleText = ["@", "@j", "@ji", "@jiv", "@jivb", "@jiv", "@ji", "@j", "@", "v", "vu", "vul", "vuli", "vulif", "vulify.", "vulify.l", "vulify.lo", "vulify.lol", "vulify.lo", "vulify.l", "vulify.", "vulify", "vulif", "vuli", "vul", "vu", "v"]; function loop() { document.getElementsByTagName("title")[0].innerHTML = titleText[x++ % titleText.length]; } </script>
 <script src="./effects/snowstorm.js"></script>
+
 </html>
