@@ -23,12 +23,21 @@
             user-select: none;
             -webkit-user-drag: none;
             -moz-user-select: none;
-            cursor: crosshair;
         }
 
         * img {
             pointer-events: none;
         }
+        
+        a {
+            pointer-events: auto !important;
+            cursor: pointer !important;
+        }
+        
+        a img {
+            pointer-events: auto !important;
+        }
+
 
         html,
         body {
@@ -52,6 +61,12 @@
             cursor: pointer;
             opacity: 1;
             transition: all 0.4s ease;
+            pointer-events: auto;
+        }
+
+        #overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
         }
 
         #overlay.hidden {
@@ -131,7 +146,6 @@
             height: auto;
             object-fit: cover;
             z-index: -1;
-            cursor: crosshair;
             pointer-events: none;
         }
 
@@ -149,7 +163,6 @@
             background-color: #d8d8d810;
             padding: 0.6rem;
             border-radius: 1.4vh;
-            cursor: crosshair;
             right: -35em;
             top: 0;
             transition: all 0.2s;
@@ -179,10 +192,14 @@
             font-weight: bold;
             text-shadow: 0px 0px 30px #ffffff;
             margin: 5px 0;
+            cursor: pointer;
+            text-decoration: underline;
+            pointer-events: auto !important;
         }
 
         .contact-info a:hover {
-            cursor: crosshair;
+            color: #0049e7;
+            text-shadow: 0px 0px 30px #0049e7;
         }
 
         .contact-info p {
@@ -255,13 +272,10 @@
         </div>
         <div class="username"> jivb</div>
         <div class="contact-info">
-            <p>Telegram: <a href="https://t.me/crimescommitted" target="_blank"
-                    style="text-decoration: none;">crimescommitted</a></p>
+            <p>Telegram: <a href="https://t.me/crimescommitted" target="_blank" style="text-decoration: none;">crimescommitted</a></p>
             <p>Website: <a href="https://vulify.lol" target="_blank" style="text-decoration: none;">vulify.lol</a></p>
-            <p>Email: <a href="mailto:jivb@vulify.lol" target="_blank"
-                    style="text-decoration: none;">jivb@vulify.lol</a></p>
-            <p>Discord: <a href="https://discordapp.com/users/864229492363755541" target="_blank"
-                    style="text-decoration: none;">jivb</a></p>
+            <p>Email: <a href="mailto:jivb@vulify.lol" target="_blank" style="text-decoration: none;">jivb@vulify.lol</a></p>
+            <p>Discord: <a href="https://discordapp.com/users/864229492363755541" target="_blank" style="text-decoration: none;">jivb</a></p>
         </div>
     </div>
     <script disable-devtool-auto="" src="https://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
@@ -270,20 +284,13 @@
 <script>
     document.getElementById('overlay').addEventListener('click', function () {
         this.classList.add('hidden');
-        document.querySelector('.card').classList.add('show');
-        document.querySelector('.ascii-logo').classList.add('show');
+        const card = document.querySelector('.card');
+        
+        if (card) card.classList.add('show');
+            document.body.style.pointerEvents = 'auto';
     });
 </script>
 <script>
-    document.getElementById('overlay').addEventListener('click', function () {
-        this.classList.add('hidden');
-        const card = document.querySelector('.card');
-        const asciiLogo = document.querySelector('.ascii-logo');
-
-        if (card) card.classList.add('show');
-        if (asciiLogo) asciiLogo.classList.add('show');
-    });
-
     const video = document.getElementById("background-video");
     const audioControl = document.getElementById("audio-control");
     const overlay = document.getElementById("overlay");
