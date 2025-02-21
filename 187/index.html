@@ -296,14 +296,6 @@
     });
 </script>
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const video = document.getElementById("background-video");
-        video.play().catch((err) => {
-            console.warn("Autoplay blocked, waiting for user interaction", err);
-        });
-    });
-</script>
-<script>
     const video = document.getElementById("background-video");
     const audioControl = document.getElementById("audio-control");
     const overlay = document.getElementById("overlay");
