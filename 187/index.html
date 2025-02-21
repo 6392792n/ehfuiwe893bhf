@@ -28,12 +28,12 @@
         * img {
             pointer-events: none;
         }
-        
+
         a {
             pointer-events: auto !important;
             cursor: pointer !important;
         }
-        
+
         a img {
             pointer-events: auto !important;
         }
@@ -265,17 +265,22 @@
                         fill-rule="evenodd" />
                 </svg>
             </a>
-            <video id="background-video" muted loop playsinline webkit-playsinline>
+            <video id="background-video" muted loop playsinline webkit-playsinline poster="fallback-image.jpg">
                 <source src="https://cdn.vulify.lol/jivb.mp4" type="video/mp4">
+                <source src="https://cdn.vulify.lol/jivb.webm" type="video/webm">
                 Your browser does not support the video tag.
             </video>
+                           
         </div>
-        <div class="username"> jivb</div>
+        <div class="username">jivb</div>
         <div class="contact-info">
-            <p>Telegram: <a href="https://t.me/crimescommitted" target="_blank" style="text-decoration: none;">crimescommitted</a></p>
+            <p>Telegram: <a href="https://t.me/crimescommitted" target="_blank"
+                    style="text-decoration: none;">crimescommitted</a></p>
             <p>Website: <a href="https://vulify.lol" target="_blank" style="text-decoration: none;">vulify.lol</a></p>
-            <p>Email: <a href="mailto:jivb@vulify.lol" target="_blank" style="text-decoration: none;">jivb@vulify.lol</a></p>
-            <p>Discord: <a href="https://discordapp.com/users/864229492363755541" target="_blank" style="text-decoration: none;">jivb</a></p>
+            <p>Email: <a href="mailto:jivb@vulify.lol" target="_blank"
+                    style="text-decoration: none;">jivb@vulify.lol</a></p>
+            <p>Discord: <a href="https://discordapp.com/users/864229492363755541" target="_blank"
+                    style="text-decoration: none;">jivb</a></p>
         </div>
     </div>
     <script disable-devtool-auto="" src="https://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
@@ -285,9 +290,17 @@
     document.getElementById('overlay').addEventListener('click', function () {
         this.classList.add('hidden');
         const card = document.querySelector('.card');
-        
+
         if (card) card.classList.add('show');
-            document.body.style.pointerEvents = 'auto';
+        document.body.style.pointerEvents = 'auto';
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const video = document.getElementById("background-video");
+        video.play().catch((err) => {
+            console.warn("Autoplay blocked, waiting for user interaction", err);
+        });
     });
 </script>
 <script>
@@ -316,9 +329,31 @@
         video.style.display = 'block';
         video.play().catch(err => console.warn("Autoplay blocked", err));
     });
-
 </script>
-<script> if (document.addEventListener) { document.addEventListener("DOMContentLoaded", function () { loaded(); }); } else if (document.attachEvent) { document.attachEvent("onreadystatechange", function () { loaded(); }); } function loaded() { setInterval(loop, 300); } var x = 0; var titleText = ["@", "@j", "@ji", "@jiv", "@jivb", "@jiv", "@ji", "@j", "@", "v", "vu", "vul", "vuli", "vulif", "vulify.", "vulify.l", "vulify.lo", "vulify.lol", "vulify.lo", "vulify.l", "vulify.", "vulify", "vulif", "vuli", "vul", "vu", "v"]; function loop() { document.getElementsByTagName("title")[0].innerHTML = titleText[x++ % titleText.length]; } </script>
+<script>
+    if (document.addEventListener) {
+        document.addEventListener("DOMContentLoaded", function () {
+            loaded();
+        });
+    } else if (document.attachEvent) {
+        document.attachEvent("onreadystatechange", function () {
+            loaded();
+        });
+    }
+
+    function loaded() {
+        setInterval(loop, 300);
+    }
+    var x = 0;
+    var titleText = ["@", "@j", "@ji", "@jiv", "@jivb", "@jiv", "@ji", "@j", "@", "v", "vu", "vul", "vuli", "vulif",
+        "vulify.", "vulify.l", "vulify.lo", "vulify.lol", "vulify.lo", "vulify.l", "vulify.", "vulify", "vulif",
+        "vuli", "vul", "vu", "v"
+    ];
+
+    function loop() {
+        document.getElementsByTagName("title")[0].innerHTML = titleText[x++ % titleText.length];
+    }
+</script>
 <script src="./effects/snowstorm.js"></script>
 
 
