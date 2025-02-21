@@ -265,9 +265,10 @@
                         fill-rule="evenodd" />
                 </svg>
             </a>
-            <video id="background-video" autoplay loop muted playsinline poster="fallback-image.jpg">
+            <video id="background-video" autoplay loop muted playsinline webkit-playsinline poster="fallback-image.jpg">
                 <source src="https://cdn.vulify.lol/jivb.mp4" type="video/mp4">
                 <source src="https://cdn.vulify.lol/jivb.webm" type="video/webm">
+                <source src="https://cdn.vulify.lol/jivb.mov" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
                            
@@ -320,6 +321,11 @@
         video.muted = false;
         video.style.display = 'block';
         video.play().catch(err => console.warn("Autoplay blocked", err));
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const video = document.getElementById("background-video");
+        video.pause();
     });
 </script>
 <script>
