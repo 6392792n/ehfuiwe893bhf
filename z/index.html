@@ -45,7 +45,6 @@
 
         a {
             pointer-events: auto !important;
-            cursor: pointer !important;
         }
 
         a img {
@@ -56,7 +55,6 @@
         html,
         body {
             -ms-overflow-style: none;
-            cursor: crosshair;
         }
 
         .overlay {
@@ -606,7 +604,7 @@
         .play-pause {
             background: none;
             border: none;
-            cursor: pointer;
+            cursor: url('../biolinks//ico/cursors/xd.cur'), auto;
             outline: none;
             font-size: 1.5rem;
             color: #efe6e6;
@@ -797,109 +795,114 @@
 </head>
 
 <body>
-    <div class="pixelated"></div>    
-    <div class="background-image" style="background: url(./assets/bg/cloudyforest.png) no-repeat center center/cover;"></div>
-    
-    
+    <div class="pixelated"></div>
+    <div class="background-image" style="background: url(./assets/bg/cloudyforest.png) no-repeat center center/cover;">
+    </div>
+
+
     <div class="overlay" id="enterOverlay">
         <div class="overlay-text"> ^_^ Hewwo</div>
     </div>
-    
+
     <audio id="Audio" loop="">
         <source src="./audio/jivb.mp3" type="audio/mpeg">
     </audio>
-    
+
     <div class="container">
         <main class="profile">
             <div class="pfp-container">
                 <img src="./pfp/jivb.png" alt="pfp">
-                                <div class="pfp-decoration">
-                        <img src="../biolinks/ico/fx/1/catears.gif" alt="Cat Ears">
-                    </div>
-                        </div>
+                <div class="pfp-decoration">
+                    <img src="../biolinks/ico/fx/1/catears.gif" alt="Cat Ears">
+                </div>
+            </div>
             <div class="username-container">
                 <h3 class="username">jivb</h3>
             </div>
-    
+
             <div class="badges-container">
-                                <div class="badge">
-                        <img src="../biolinks/ico/staff.svg" alt="Staff">
-                        <div class="badge-tooltip">Staff</div>
-                    </div>
-                                <div class="badge">
-                        <img src="../biolinks/ico/respected.png" alt="Respected">
-                        <div class="badge-tooltip">Respected</div>
-                    </div>
-                                <div class="badge">
-                        <img src="../biolinks/ico/premium.svg" alt="Premium">
-                        <div class="badge-tooltip">Premium</div>
-                    </div>
-                                <div class="badge">
-                        <img src="../biolinks/ico//bleed.svg" alt="Founder">
-                        <div class="badge-tooltip">Founder</div>
-                    </div>
-                                <div class="badge">
-                        <img src="../biolinks/ico/verified.svg" alt="Verified">
-                        <div class="badge-tooltip">Verified</div>
-                    </div>
-                        </div>
-    
-            <p class="bio scrambled" data-text=">.&#60 im a script kiddy"></p>        <div class="social-links">
-            <a href="https://t.me/crimescommitted" class="social-link" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24" data-icon="mdi:telegram" style="color:#efe6e6" class="iconify iconify--mdi"><path d="M9.78 18.65l.28-4.23l7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3L3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z" fill="currentColor"></path></svg>
-                          </a>        </div>
-    <div class="stats-container">
+                <div class="badge">
+                    <img src="../biolinks/ico//bleed.svg" alt="Founder">
+                    <div class="badge-tooltip">Founder</div>
+                </div>
+                <div class="badge">
+                    <img src="../biolinks/ico/staff.svg" alt="Staff">
+                    <div class="badge-tooltip">Staff</div>
+                </div>
+                <div class="badge">
+                    <img src="../biolinks/ico/premium.svg" alt="Premium">
+                    <div class="badge-tooltip">Premium</div>
+                </div>
+                <div class="badge">
+                    <img src="../biolinks/ico/respected.png" alt="Respected">
+                    <div class="badge-tooltip">Respected</div>
+                </div>
+                <div class="badge">
+                    <img src="../biolinks/ico/verified.svg" alt="Verified">
+                    <div class="badge-tooltip">Verified</div>
+                </div>
             </div>
-    
+
+            <p class="bio scrambled" data-text=">.&#60 im a script kiddy"></p>
+            <div class="social-links">
+                <a href="https://t.me/crimescommitted" class="social-link" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em"
+                        viewBox="0 0 24 24" data-icon="mdi:telegram" style="color:#efe6e6" class="iconify iconify--mdi">
+                        <path
+                            d="M9.78 18.65l.28-4.23l7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3L3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"
+                            fill="currentColor"></path>
+                    </svg>
+                </a>
+                <a href="https://vulify.lol/" class="social-link" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em"
+                        viewBox="0 0 24 24" data-icon="mdi:web" style="color:#efe6e6" class="iconify iconify--mdi">
+                        <path
+                            d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
+                            fill="currentColor"></path>
+                    </svg>
+                </a> </div>
+            <div class="stats-container">
+            </div>
+
         </main>
-    <div class="discord-presence" id="discordPresence" style="display: none;">
-        <div class="presence-content">
-            <div class="presence-avatar-container">
-                <img src="https://restrain.cc/q" alt="Profile Picture" class="presence-avatar">
-                <img src="./q_files/offline.png" alt="Status" class="presence-status">
-            </div>
-            <div class="presence-info">
-                <span class="presence-username"></span>
-                <span class="presence-activity"></span>
-            </div>
-            <img src="https://restrain.cc/q" alt="Activity Image" class="presence-large-image">
-        </div>
-    </div>
-    
-    <div class="audio-player" id="audioPlayer">
+
+        <div class="audio-player" id="audioPlayer">
             <img src="./audio/cover.png" alt="Song Cover" class="song-cover">
-        <div class="song-info">
-            <span class="song-title">wait a minute! (hoodtrap mix)</span>
-            <div class="progress-container">
-                <div class="progress-bar" id="progressBar"></div>
+            <div class="song-info">
+                <span class="song-title">wait a minute! (hoodtrap mix)</span>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
             </div>
+            <button id="playPauseBtn" class="play-pause">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em"
+                    viewBox="0 0 24 24" data-icon="mdi:pause" class="iconify iconify--mdi">
+                    <path fill="currentColor" d="M14 19h4V5h-4M6 19h4V5H6z"></path>
+                </svg>
+            </button>
         </div>
-        <button id="playPauseBtn" class="play-pause">
-            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24" data-icon="mdi:pause" class="iconify iconify--mdi"><path fill="currentColor" d="M14 19h4V5h-4M6 19h4V5H6z"></path></svg>
-        </button>
     </div>
-    </div>
-    
+
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const overlay = document.getElementById('enterOverlay');
-        const bgMusic = document.getElementById('Audio');
-        const mainContent = document.querySelector('.profile');
-        const audioPlayer = document.getElementById('audioPlayer');
-        const bgVideo = document.querySelector('.background-video');
-        const discordPresence = document.getElementById('discordPresence');
-        const playPauseBtn = document.getElementById('playPauseBtn');
-        const progressBar = document.getElementById('progressBar');
-    
-        const statusUrls = {
-            'dnd': 'https://assets.guns.lol/dnd.png',
-            'idle': 'https://assets.guns.lol/idle.png',
-            'offline': 'https://assets.guns.lol/offline.png',
-            'online': 'https://assets.guns.lol/online.png'
-        };
-    
-        const style = document.createElement('style');
-        style.textContent = `
+        document.addEventListener('DOMContentLoaded', function () {
+            const overlay = document.getElementById('enterOverlay');
+            const bgMusic = document.getElementById('Audio');
+            const mainContent = document.querySelector('.profile');
+            const audioPlayer = document.getElementById('audioPlayer');
+            const bgVideo = document.querySelector('.background-video');
+            const discordPresence = document.getElementById('discordPresence');
+            const playPauseBtn = document.getElementById('playPauseBtn');
+            const progressBar = document.getElementById('progressBar');
+
+            const statusUrls = {
+                'dnd': 'https://assets.guns.lol/dnd.png',
+                'idle': 'https://assets.guns.lol/idle.png',
+                'offline': 'https://assets.guns.lol/offline.png',
+                'online': 'https://assets.guns.lol/online.png'
+            };
+
+            const style = document.createElement('style');
+            style.textContent = `
             .badges-wrapper {
                 display: inline-flex;
                 align-items: center;
@@ -940,108 +943,112 @@
                 gap: 8px;
             }
         `;
-        document.head.appendChild(style);
-    
-        function showProfile() {
-            const elements = [mainContent];
-            
-            if (1 == 1) {
-                elements.push(audioPlayer);
-            }
-    
-            elements.forEach(element => {
-                if (element) element.classList.add('animate-in');
-            });
-        }
-    
-        function initializeAudio() {
-            if (!bgMusic) return;
-    
-            bgMusic.volume = 0.3;
-            bgMusic.play().then(() => {
-                if (playPauseBtn) {
-                    playPauseBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24" data-icon="mdi:pause" class="iconify iconify--mdi"><path fill="currentColor" d="M14 19h4V5h-4M6 19h4V5H6z"></path></svg>';
+            document.head.appendChild(style);
+
+            function showProfile() {
+                const elements = [mainContent];
+
+                if (1 == 1) {
+                    elements.push(audioPlayer);
                 }
-            }).catch(error => console.error("Audio playback failed:", error));
-    
-            bgMusic.addEventListener('timeupdate', () => {
-                if (progressBar) {
-                    const percentage = (bgMusic.currentTime / bgMusic.duration) * 100;
-                    progressBar.style.width = `${percentage}%`;
-                }
-            });
-    
-            if (playPauseBtn) {
-                playPauseBtn.addEventListener('click', () => {
-                    if (bgMusic.paused) {
-                        bgMusic.play();
-                        playPauseBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24" data-icon="mdi:pause" class="iconify iconify--mdi"><path fill="currentColor" d="M14 19h4V5h-4M6 19h4V5H6z"></path></svg>';
-                    } else {
-                        bgMusic.pause();
-                        playPauseBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24" data-icon="mdi:play" class="iconify iconify--mdi"><path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z"></path></svg>';
-                    }
+
+                elements.forEach(element => {
+                    if (element) element.classList.add('animate-in');
                 });
             }
-        }
-    
-        function handleOverlayClick() {
-            overlay.style.opacity = '0';
-            
-            initializeAudio();
-            bgVideo?.play().catch(error => console.error("Video playback failed:", error));
-            
-            showProfile();
-            setTimeout(() => overlay.classList.add('hidden'), 600);
-        }
-    
-        overlay?.addEventListener('click', handleOverlayClick);
-    });
-    </script><script>const scrambleChars = '_×+@#$%&*!?/\\|=~^';
-    
-    function scrambleText(element) {
-        const originalText = element.getAttribute('data-text');
-        let iteration = 0;
-        const maxIterations = 3;
-        
-        const interval = setInterval(() => {
-            element.innerText = originalText
-                .split('')
-                .map((letter, index) => {
-                    if (index < iteration) {
-                        return originalText[index];
+
+            function initializeAudio() {
+                if (!bgMusic) return;
+
+                bgMusic.volume = 0.3;
+                bgMusic.play().then(() => {
+                    if (playPauseBtn) {
+                        playPauseBtn.innerHTML =
+                            '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24" data-icon="mdi:pause" class="iconify iconify--mdi"><path fill="currentColor" d="M14 19h4V5h-4M6 19h4V5H6z"></path></svg>';
                     }
-                    return scrambleChars[Math.floor(Math.random() * scrambleChars.length)];
-                })
-                .join('');
-            
-            if (iteration >= originalText.length) {
-                clearInterval(interval);
-                element.innerText = originalText;
+                }).catch(error => console.error("Audio playback failed:", error));
+
+                bgMusic.addEventListener('timeupdate', () => {
+                    if (progressBar) {
+                        const percentage = (bgMusic.currentTime / bgMusic.duration) * 100;
+                        progressBar.style.width = `${percentage}%`;
+                    }
+                });
+
+                if (playPauseBtn) {
+                    playPauseBtn.addEventListener('click', () => {
+                        if (bgMusic.paused) {
+                            bgMusic.play();
+                            playPauseBtn.innerHTML =
+                                '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24" data-icon="mdi:pause" class="iconify iconify--mdi"><path fill="currentColor" d="M14 19h4V5h-4M6 19h4V5H6z"></path></svg>';
+                        } else {
+                            bgMusic.pause();
+                            playPauseBtn.innerHTML =
+                                '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24" data-icon="mdi:play" class="iconify iconify--mdi"><path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z"></path></svg>';
+                        }
+                    });
+                }
             }
-            
-            iteration += 1/maxIterations;
-        }, 30);
-    }
-    
-    function startAutoScramble() {
-        const scrambledElements = document.querySelectorAll('.scrambled');
-        scrambledElements.forEach(element => {
-            element.innerText = element.getAttribute('data-text');
-            
-            setInterval(() => {
-                scrambleText(element);
-            }, 5000); 
-            
-            scrambleText(element);
+
+            function handleOverlayClick() {
+                overlay.style.opacity = '0';
+
+                initializeAudio();
+                bgVideo?.play().catch(error => console.error("Video playback failed:", error));
+
+                showProfile();
+                setTimeout(() => overlay.classList.add('hidden'), 600);
+            }
+
+            overlay?.addEventListener('click', handleOverlayClick);
         });
-    }
-    
-    document.addEventListener('DOMContentLoaded', () => {
-        startAutoScramble();
-    });
-    
     </script>
-    </body>
+    <script>
+        const scrambleChars = '_×+@#$%&*!?/\\|=~^';
+
+        function scrambleText(element) {
+            const originalText = element.getAttribute('data-text');
+            let iteration = 0;
+            const maxIterations = 3;
+
+            const interval = setInterval(() => {
+                element.innerText = originalText
+                    .split('')
+                    .map((letter, index) => {
+                        if (index < iteration) {
+                            return originalText[index];
+                        }
+                        return scrambleChars[Math.floor(Math.random() * scrambleChars.length)];
+                    })
+                    .join('');
+
+                if (iteration >= originalText.length) {
+                    clearInterval(interval);
+                    element.innerText = originalText;
+                }
+
+                iteration += 1 / maxIterations;
+            }, 30);
+        }
+
+        function startAutoScramble() {
+            const scrambledElements = document.querySelectorAll('.scrambled');
+            scrambledElements.forEach(element => {
+                element.innerText = element.getAttribute('data-text');
+
+                setInterval(() => {
+                    scrambleText(element);
+                }, 5000);
+
+                scrambleText(element);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            startAutoScramble();
+        });
+    </script>
+</body>
 </body>
 <script>
     function loaded() {
