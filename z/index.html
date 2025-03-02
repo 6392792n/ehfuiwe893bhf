@@ -611,77 +611,6 @@
             font-size: 1.5rem;
             color: #efe6e6;
         }
-
-        .discord-presence {
-            width: 100%;
-            max-width: 600px;
-            background-color: rgba(20, 20, 23, 0.50);
-            color: #efe6e6;
-            backdrop-filter: blur(10px);
-            border-radius: 25px;
-            border: 1px solid #78726d20;
-            padding: 15px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .discord-presence.animate-in {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .presence-content {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .presence-avatar-container {
-            position: relative;
-            width: 48px;
-            height: 48px;
-        }
-
-        .presence-avatar {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .presence-status {
-            position: absolute;
-            bottom: -2px;
-            right: -2px;
-            width: 16px;
-            height: 16px;
-            z-index: 3;
-        }
-
-        .presence-info {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        .presence-username {
-            font-weight: bold;
-            font-size: 1rem;
-        }
-
-        .presence-activity {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        .presence-large-image {
-            width: 48px;
-            height: 48px;
-            border-radius: 8px;
-            object-fit: cover;
-        }
     </style>
 
     <style type="text/css" id="operaUserStyle"></style>
@@ -868,115 +797,91 @@
 </head>
 
 <body>
-    <div class="pixelated"></div>
-    <div class="background-image"
-        style="background: url(https://files.catbox.moe/6azk1p.png) no-repeat center center/cover;"></div>
-
-
-
+    <div class="pixelated"></div>    
+    <div class="background-image" style="background: url(./assets/bg/cloudyforest.png) no-repeat center center/cover;"></div>
+    
+    
     <div class="overlay" id="enterOverlay">
-        <div class="overlay-text">hewwo ^-^</div>
+        <div class="overlay-text"> ^_^ Hewwo</div>
     </div>
+    
     <audio id="Audio" loop="">
-        <source src="audio/jivb.mp3" type="audio/mpeg">
+        <source src="./audio/jivb.mp3" type="audio/mpeg">
     </audio>
-
-
+    
     <div class="container">
-        <main class="profile animate-in">
-
-
+        <main class="profile">
             <div class="pfp-container">
                 <img src="./pfp/jivb.png" alt="pfp">
-                <div class="pfp-decoration">
-                    <img src="../biolinks/ico/fx/1/catears.gif" alt="Earth decoration">
-                </div>
-            </div>
-
+                                <div class="pfp-decoration">
+                        <img src="../biolinks/ico/fx/1/catears.gif" alt="Cat Ears">
+                    </div>
+                        </div>
             <div class="username-container">
                 <h3 class="username">jivb</h3>
             </div>
-
+    
             <div class="badges-container">
-                <div class="badge">
-                    <img src="../biolinks/ico/bleed.svg" alt="Founder">
-                    <div class="badge-tooltip">Owner</div>
-                </div>
-                <div class="badge">
-                    <img src="../biolinks/ico/staff.svg" alt="Staff">
-                    <div class="badge-tooltip">Staff</div>
-                </div>
-                <div class="badge">
-                    <img src="../biolinks/ico/premium.svg" alt="Premium">
-                    <div class="badge-tooltip">Premium</div>
-                </div>
-                <div class="badge">
-                    <img src="../biolinks/ico/respected.png" alt="Respected">
-                    <div class="badge-tooltip">Respected</div>
-                </div>
-                <div class="badge">
-                    <img src="../biolinks/ico/verified.svg" alt="Verified">
-                    <div class="badge-tooltip">Verified</div>
-                </div>
+                                <div class="badge">
+                        <img src="../biolinks/ico/staff.svg" alt="Staff">
+                        <div class="badge-tooltip">Staff</div>
+                    </div>
+                                <div class="badge">
+                        <img src="../biolinks/ico/respected.png" alt="Respected">
+                        <div class="badge-tooltip">Respected</div>
+                    </div>
+                                <div class="badge">
+                        <img src="../biolinks/ico/premium.svg" alt="Premium">
+                        <div class="badge-tooltip">Premium</div>
+                    </div>
+                                <div class="badge">
+                        <img src="../biolinks/ico//bleed.svg" alt="Founder">
+                        <div class="badge-tooltip">Founder</div>
+                    </div>
+                                <div class="badge">
+                        <img src="../biolinks/ico/verified.svg" alt="Verified">
+                        <div class="badge-tooltip">Verified</div>
+                    </div>
+                        </div>
+    
+            <p class="bio scrambled" data-text=">.&#60 im a script kiddy"></p>        <div class="social-links">
+            <a href="https://t.me/crimescommitted" class="social-link" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24" data-icon="mdi:telegram" style="color:#efe6e6" class="iconify iconify--mdi"><path d="M9.78 18.65l.28-4.23l7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3L3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z" fill="currentColor"></path></svg>
+                          </a>        </div>
+    <div class="stats-container">
             </div>
-
-            <p class="bio scrambled" data-text=">.&#60 im a script kiddy"> xd </p>
-            <div class="social-links">
-                <a href="https://t.me/crimescommitted" class="social-link" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em"
-                        viewBox="0 0 24 24" data-icon="mdi:telegram" style="color:#efe6e6" class="iconify iconify--mdi">
-                        <path
-                            d="M9.78 18.65l.28-4.23l7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3L3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"
-                            fill="currentColor"></path>
-                    </svg>
-                </a>
-
-                <a href="https://vulify.lol" class="social-link" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em"
-                        viewBox="0 0 24 24" data-icon="mdi:web" style="color:#efe6e6" class="iconify iconify--mdi">
-                        <path
-                            d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
-                            fill="currentColor"></path>
-                    </svg>
-                </a> </div>
-
+    
         </main>
-
-        <div class="audio-player animate-in" id="audioPlayer">
-            <img src="./audio/cover.png" alt="Song Cover" class="song-cover">
-            <div class="song-info">
-                <span class="song-title">wait a minute! (hoodtrap mix)</span>
-                <div class="progress-container">
-                    <div class="progress-bar" id="progressBar"></div>
-                </div>
+    <div class="discord-presence" id="discordPresence" style="display: none;">
+        <div class="presence-content">
+            <div class="presence-avatar-container">
+                <img src="https://restrain.cc/q" alt="Profile Picture" class="presence-avatar">
+                <img src="./q_files/offline.png" alt="Status" class="presence-status">
             </div>
-            <button id="playPauseBtn" class="play-pause">
-                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em"
-                    viewBox="0 0 24 24" data-icon="mdi:pause" class="iconify iconify--mdi">
-                    <path fill="currentColor" d="M14,19H18V5H14M6,19H10V5H6V19Z"></path>
-                </svg>
-            </button>
+            <div class="presence-info">
+                <span class="presence-username"></span>
+                <span class="presence-activity"></span>
+            </div>
+            <img src="https://restrain.cc/q" alt="Activity Image" class="presence-large-image">
         </div>
     </div>
-    <script disable-devtool-auto="" src="https://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
-</body>
-<script src="./effects/cursor.js"></script>
-<script>
-    function loaded() {
-        setInterval(loop, 300);
-    }
-    var x = 0;
-    var titleText = ["@", "@j", "@ji", "@jiv", "@jivb", "@jiv", "@ji", "@j", "@", "v", "vu", "vul", "vuli", "vulif",
-        "vulify.", "vulify.l", "vulify.lo", "vulify.lol", "vulify.lo", "vulify.l", "vulify.", "vulify", "vulif",
-        "vuli", "vul", "vu", "v"
-    ];
-
-    function loop() {
-        document.getElementsByTagName("title")[0].innerHTML = titleText[x++ % titleText.length];
-    }
-</script>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
+    
+    <div class="audio-player" id="audioPlayer">
+            <img src="./audio/cover.png" alt="Song Cover" class="song-cover">
+        <div class="song-info">
+            <span class="song-title">wait a minute! (hoodtrap mix)</span>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+        <button id="playPauseBtn" class="play-pause">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24" data-icon="mdi:pause" class="iconify iconify--mdi"><path fill="currentColor" d="M14 19h4V5h-4M6 19h4V5H6z"></path></svg>
+        </button>
+    </div>
+    </div>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
         const overlay = document.getElementById('enterOverlay');
         const bgMusic = document.getElementById('Audio');
         const mainContent = document.querySelector('.profile');
@@ -985,14 +890,14 @@
         const discordPresence = document.getElementById('discordPresence');
         const playPauseBtn = document.getElementById('playPauseBtn');
         const progressBar = document.getElementById('progressBar');
-
+    
         const statusUrls = {
             'dnd': 'https://assets.guns.lol/dnd.png',
             'idle': 'https://assets.guns.lol/idle.png',
             'offline': 'https://assets.guns.lol/offline.png',
             'online': 'https://assets.guns.lol/online.png'
         };
-
+    
         const style = document.createElement('style');
         style.textContent = `
             .badges-wrapper {
@@ -1036,117 +941,68 @@
             }
         `;
         document.head.appendChild(style);
-
-
+    
         function showProfile() {
             const elements = [mainContent];
-
+            
             if (1 == 1) {
                 elements.push(audioPlayer);
             }
-
+    
             elements.forEach(element => {
                 if (element) element.classList.add('animate-in');
             });
         }
-
+    
         function initializeAudio() {
             if (!bgMusic) return;
-
+    
             bgMusic.volume = 0.3;
             bgMusic.play().then(() => {
                 if (playPauseBtn) {
-                    playPauseBtn.innerHTML = '<span class="iconify" data-icon="mdi:pause"></span>';
+                    playPauseBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24" data-icon="mdi:pause" class="iconify iconify--mdi"><path fill="currentColor" d="M14 19h4V5h-4M6 19h4V5H6z"></path></svg>';
                 }
             }).catch(error => console.error("Audio playback failed:", error));
-
+    
             bgMusic.addEventListener('timeupdate', () => {
                 if (progressBar) {
                     const percentage = (bgMusic.currentTime / bgMusic.duration) * 100;
                     progressBar.style.width = `${percentage}%`;
                 }
             });
-
+    
             if (playPauseBtn) {
                 playPauseBtn.addEventListener('click', () => {
                     if (bgMusic.paused) {
                         bgMusic.play();
-                        playPauseBtn.innerHTML = '<span class="iconify" data-icon="mdi:pause"></span>';
+                        playPauseBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24" data-icon="mdi:pause" class="iconify iconify--mdi"><path fill="currentColor" d="M14 19h4V5h-4M6 19h4V5H6z"></path></svg>';
                     } else {
                         bgMusic.pause();
-                        playPauseBtn.innerHTML = '<span class="iconify" data-icon="mdi:play"></span>';
+                        playPauseBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24" data-icon="mdi:play" class="iconify iconify--mdi"><path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z"></path></svg>';
                     }
                 });
             }
         }
-
+    
         function handleOverlayClick() {
             overlay.style.opacity = '0';
-
+            
             initializeAudio();
             bgVideo?.play().catch(error => console.error("Video playback failed:", error));
-
+            
             showProfile();
             setTimeout(() => overlay.classList.add('hidden'), 600);
         }
-
+    
         overlay?.addEventListener('click', handleOverlayClick);
     });
-</script>
-<script>
-    function createSnow() {
-        const snowContainer = document.querySelector('.snow-container');
-        const snowflakesCount = 75;
-
-        for (let i = 0; i < snowflakesCount; i++) {
-            const snowflake = document.createElement('div');
-            snowflake.classList.add('snow');
-
-            snowflake.style.left = `${Math.random() * 100}vw`;
-            snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`;
-            snowflake.style.opacity = Math.random();
-            snowflake.style.width = snowflake.style.height = `${Math.random() * 5 + 5}px`;
-
-            snowContainer.appendChild(snowflake);
-
-            snowflake.addEventListener('animationend', () => {
-                snowflake.remove();
-                createSnowflake();
-            });
-        }
-    }
-
-    function createSnowflake() {
-        const snowContainer = document.querySelector('.snow-container');
-        const snowflake = document.createElement('div');
-        snowflake.classList.add('snow');
-
-        snowflake.style.left = `${Math.random() * 100}vw`;
-        snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`;
-        snowflake.style.opacity = Math.random();
-        snowflake.style.width = snowflake.style.height = `${Math.random() * 5 + 5}px`;
-
-        snowContainer.appendChild(snowflake);
-
-        snowflake.addEventListener('animationend', () => {
-            snowflake.remove();
-            createSnowflake();
-        });
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        if (document.querySelector('.snow-container')) {
-            createSnow();
-        }
-    });
-
-    const scrambleChars = '_×+@#$%&*!?/\\|=~^';
-
+    </script><script>const scrambleChars = '_×+@#$%&*!?/\\|=~^';
+    
     function scrambleText(element) {
         const originalText = element.getAttribute('data-text');
         let iteration = 0;
         const maxIterations = 3;
-
+        
         const interval = setInterval(() => {
             element.innerText = originalText
                 .split('')
@@ -1157,32 +1013,50 @@
                     return scrambleChars[Math.floor(Math.random() * scrambleChars.length)];
                 })
                 .join('');
-
+            
             if (iteration >= originalText.length) {
                 clearInterval(interval);
                 element.innerText = originalText;
             }
-
-            iteration += 1 / maxIterations;
+            
+            iteration += 1/maxIterations;
         }, 30);
     }
-
+    
     function startAutoScramble() {
         const scrambledElements = document.querySelectorAll('.scrambled');
         scrambledElements.forEach(element => {
             element.innerText = element.getAttribute('data-text');
-
+            
             setInterval(() => {
                 scrambleText(element);
-            }, 5000);
-
+            }, 5000); 
+            
             scrambleText(element);
         });
     }
-
+    
     document.addEventListener('DOMContentLoaded', () => {
         startAutoScramble();
     });
+    
+    </script>
+    </body>
+</body>
+<script src="./effects/cursor.js"></script>
+<script>
+    function loaded() {
+        setInterval(loop, 300);
+    }
+    var x = 0;
+    var titleText = ["@", "@j", "@ji", "@jiv", "@jivb", "@jiv", "@ji", "@j", "@", "v", "vu", "vul", "vuli", "vulif",
+        "vulify.", "vulify.l", "vulify.lo", "vulify.lol", "vulify.lo", "vulify.l", "vulify.", "vulify", "vulif",
+        "vuli", "vul", "vu", "v"
+    ];
+
+    function loop() {
+        document.getElementsByTagName("title")[0].innerHTML = titleText[x++ % titleText.length];
+    }
 </script>
 <script src="./effects/snowstorm.js"></script>
 
